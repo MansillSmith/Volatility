@@ -11,6 +11,9 @@ class VolatilityDataPoint:
         self.Close = close
         self.AdjClose = adjClose
 
+    def AverageHighLow(self):
+        return (self.High + self.Low) / 2
+
     @staticmethod
     def ParseCSV(line: str):
         try:

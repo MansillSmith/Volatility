@@ -14,3 +14,11 @@ class Simulation:
             temp.append(VolatilityDataPoint.ParseCSV(l))
         
         self.DataPoints = temp
+
+    def Simulate(self):
+        buyAmount = 15
+        sellAmount = 20
+
+        for i in range(len(self.DataPoints)):
+            startOfInterval = self.DataPoints[i]
+            endOfInterval = self.DataPoints[i + self.HoldInterval]
